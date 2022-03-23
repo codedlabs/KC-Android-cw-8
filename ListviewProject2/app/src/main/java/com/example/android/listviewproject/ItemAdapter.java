@@ -47,35 +47,7 @@ class ItemAdapter extends ArrayAdapter<Items> {
         price.setText(currentItem.getItemPrice() + "");
 
         ImageView delete = view.findViewById(R.id.deleteItem);
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                alert.setTitle("Delete")
-                        .setMessage("Are you sure you want to delete?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                items.remove(position);
-
-                                notifyDataSetChanged();
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                            }
-                        }).show();
-            }
-        });
-
-//        delete.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                items.remove(position);
-//                notifyDataSetChanged();
-//            }
-//        });
+     
         return view;
     }
 }
